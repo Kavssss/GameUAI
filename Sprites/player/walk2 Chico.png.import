@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk1.png-9c147f7ad0e6328a1d2ed62ccbab83a9.stex"
+path="res://.import/walk2 Chico.png-bc735afc136aa68cd058ac39c3156e25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/walk1.png"
-dest_files=[ "res://.import/walk1.png-9c147f7ad0e6328a1d2ed62ccbab83a9.stex" ]
+source_file="res://Sprites/player/walk2 Chico.png"
+dest_files=[ "res://.import/walk2 Chico.png-bc735afc136aa68cd058ac39c3156e25.stex" ]
 
 [params]
 
