@@ -1,7 +1,17 @@
-extends AnimatedSprite
+extends StaticBody2D
+
+var btn = false
 
 func _ready():
-	pass # Replace with function body.
+	pass
 
-func _on_Pisar_body_entered(body):
-	get_node("Botão/Botao").texture.set("Button down.png")
+func pressionado():
+	$Sprite.play("down")
+	btn = true
+
+func livre():
+	$Sprite.play("up")
+	btn = false
+
+func isPressed():
+	return btn

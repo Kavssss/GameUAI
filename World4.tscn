@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Sprites/Background.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Ground.png" type="Texture" id=2]
@@ -12,35 +12,32 @@
 [ext_resource path="res://Sprites/open4.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/open6.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/open3.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/player/dead Chico.png" type="Texture" id=13]
-[ext_resource path="res://World.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/Titulos/4-Volte.png" type="Texture" id=13]
+[ext_resource path="res://World4.gd" type="Script" id=14]
 [ext_resource path="res://Door.gd" type="Script" id=15]
 [ext_resource path="res://Spike.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Sprites/Titulos/1-Simples.png" type="Texture" id=17]
+[ext_resource path="res://Entrada.gd" type="Script" id=17]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 5.62502, 111.393 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 3.43741, 110.105 )
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 25.3127, 111.393 )
+extents = Vector2( 20.6247, 107.8 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 184.771, 23.4477 )
+extents = Vector2( 184.078, 29.3096 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 107.783, 23.4477 )
+extents = Vector2( 110.255, 26.3787 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 107.783, 23.4477 )
+extents = Vector2( 105.461, 24.9134 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 107.783, 23.4477 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 107.783, 23.4477 )
-
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 171, 117 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -58,7 +55,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 5, 65.25 )
 
-[node name="World" type="Node2D"]
+[node name="World4" type="Node2D"]
 script = ExtResource( 14 )
 
 [node name="Background" type="Sprite" parent="."]
@@ -84,27 +81,22 @@ position = Vector2( -615, -229.973 )
 polygon = PoolVector2Array( 1575, -309.027, 1575, 21.56, 1215, 21.56, 1215, -21.56, 1425, -21.56, 1425, -265.907, 720, -265.907, 720, -165.293, 525, -165.293, 525, -265.907, -180, -265.907, -180, -21.56, 15.0001, -21.56, 15.0001, 21.56, -345, 21.56, -345, -309.027 )
 
 [node name="Entrada" type="Area2D" parent="Scenario"]
+script = ExtResource( 17 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Scenario/Entrada"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/Entrada"]
+position = Vector2( -950.625, -93.4267 )
 scale = Vector2( 1, 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/Entrada/StaticBody2D"]
-position = Vector2( -955.938, -93.935 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 13 )
+shape = SubResource( 8 )
 
 [node name="Saida" type="Area2D" parent="Scenario"]
-collision_layer = 16384
-collision_mask = 16384
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scenario/Saida"]
-position = Vector2( 926.25, -93.4267 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 9 )
+position = Vector2( 930, -93.4267 )
+shape = SubResource( 13 )
 
 [node name="Plataform" type="Sprite" parent="."]
-position = Vector2( 604, 277 )
+position = Vector2( 608, 276 )
 scale = Vector2( 0.521518, 0.511777 )
 z_index = 1
 texture = ExtResource( 7 )
@@ -115,15 +107,15 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Plataform"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
-position = Vector2( -146.277, 6.83899 )
+position = Vector2( -151.481, 5.86194 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
-position = Vector2( -515.82, 194.421 )
+position = Vector2( -520.596, 192.467 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
-position = Vector2( 238.663, 194.421 )
+position = Vector2( 237.767, 192.955 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
@@ -134,23 +126,8 @@ shape = SubResource( 4 )
 position = Vector2( -515.82, -180.743 )
 shape = SubResource( 5 )
 
-[node name="Dead" type="Sprite" parent="."]
-position = Vector2( -265, 83 )
-scale = Vector2( 0.166667, 0.166667 )
-texture = ExtResource( 13 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Dead"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dead/StaticBody2D"]
-position = Vector2( -3, 2.99994 )
-shape = SubResource( 10 )
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
-z_index = 3
-collision_mask = 16387
+collision_mask = 16642
 
 [node name="Botão" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 4 )
@@ -210,7 +187,7 @@ position = Vector2( 632, 499 )
 rotation = -1.5708
 
 [node name="Spike11" parent="Espinhos" instance=ExtResource( 16 )]
-position = Vector2( 474, 294 )
+position = Vector2( 476, 294 )
 rotation = 1.5708
 
 [node name="Spike12" parent="Espinhos" instance=ExtResource( 16 )]
@@ -228,7 +205,8 @@ rotation = -3.14159
 [node name="Titulo" type="Sprite" parent="."]
 position = Vector2( 165, 70 )
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 17 )
+texture = ExtResource( 13 )
 centered = false
 
+[connection signal="body_entered" from="Scenario/Entrada" to="Scenario/Entrada" method="_on_Entrada_body_entered"]
 [connection signal="body_entered" from="Scenario/Saida" to="Scenario/Saida" method="_on_Saida_body_entered"]
