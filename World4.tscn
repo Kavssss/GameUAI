@@ -22,7 +22,7 @@
 extents = Vector2( 5.62502, 111.393 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 20.6247, 107.8 )
+extents = Vector2( 14.062, 107.8 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 184.078, 29.3096 )
@@ -91,7 +91,8 @@ shape = SubResource( 8 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scenario/Saida"]
-position = Vector2( 930, -93.4267 )
+position = Vector2( 936.563, -93.4267 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 13 )
 
 [node name="Plataform" type="Sprite" parent="."]

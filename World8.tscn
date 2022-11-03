@@ -13,16 +13,16 @@
 [ext_resource path="res://Sprites/open6.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/open3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/player/dead Chico.png" type="Texture" id=13]
-[ext_resource path="res://World.gd" type="Script" id=14]
+[ext_resource path="res://World8.gd" type="Script" id=14]
 [ext_resource path="res://Door.gd" type="Script" id=15]
 [ext_resource path="res://Spike.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Sprites/Titulos/1-Simples.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Titulos/7-Confusao.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 3.43741, 110.105 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 16.406, 111.393 )
+extents = Vector2( 12.656, 111.393 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 184.771, 23.4477 )
@@ -58,7 +58,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 5, 65.25 )
 
-[node name="World" type="Node2D"]
+[node name="World8" type="Node2D"]
 script = ExtResource( 14 )
 
 [node name="Background" type="Sprite" parent="."]
@@ -97,8 +97,7 @@ collision_mask = 16384
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scenario/Saida"]
-position = Vector2( 935.157, -93.4267 )
-scale = Vector2( 1, 1 )
+position = Vector2( 938.907, -93.4267 )
 shape = SubResource( 9 )
 
 [node name="Plataform" type="Sprite" parent="."]

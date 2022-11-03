@@ -15,4 +15,8 @@ func _on_Saida_body_entered(body):
 	elif(get_tree().get_current_scene().get_name() == "World5"):
 		get_tree().change_scene("res://World6.tscn")
 	elif(get_tree().get_current_scene().get_name() == "World6"):
-		get_tree().change_scene("res://World.tscn")
+		get_tree().change_scene("res://World7.tscn")
+	elif(get_tree().get_current_scene().get_name() == "World7"):
+		get_tree().change_scene("res://World8.tscn")
+	elif(get_tree().get_current_scene().get_name() == "World8"):
+		get_tree().change_scene("res://World9.tscn")
