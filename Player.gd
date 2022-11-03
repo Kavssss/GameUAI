@@ -2,8 +2,6 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 var motion = Vector2()
-var morteX
-var morteY
 
 func _physics_process(_delta):
 	motion.y += 20
@@ -24,10 +22,11 @@ func _physics_process(_delta):
 		if Input.is_action_pressed("ui_up") or Input.is_key_pressed(KEY_W):
 			motion.y = -520
 	
-	if motion.y >= 1500:
-		get_tree().quit()
+	# if motion.y >= 1500:
+		# get_tree().quit()
 		
 	motion = move_and_slide(motion, UP)
+	queda()
 
 func _on_Pisar_body_entered(body):
 	body.pressionado()
@@ -37,3 +36,6 @@ func _on_Pisar_body_exited(body):
 
 func _on_Limite_body_entered(body):
 	body.morte()
+
+func queda():
+	return motion.y

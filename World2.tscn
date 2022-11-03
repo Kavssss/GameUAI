@@ -12,7 +12,7 @@
 [ext_resource path="res://Sprites/open4.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/open6.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/open3.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Titulos/2-TenteMais.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Titulos/2-Paciencia.png" type="Texture" id=13]
 [ext_resource path="res://World2.gd" type="Script" id=14]
 [ext_resource path="res://Door.gd" type="Script" id=15]
 [ext_resource path="res://Spike.tscn" type="PackedScene" id=16]
@@ -56,6 +56,9 @@ extents = Vector2( 5, 65.25 )
 
 [node name="World2" type="Node2D"]
 script = ExtResource( 14 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 512, 301 )
@@ -85,7 +88,6 @@ polygon = PoolVector2Array( 1575, -309.027, 1575, 21.56, 1215, 21.56, 1215, -21.
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/Entrada/StaticBody2D"]
 position = Vector2( -951.563, -95.3317 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Saida" type="Area2D" parent="Scenario"]
@@ -95,7 +97,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scenario/Saida"]
 position = Vector2( 918.75, -93.4267 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 13 )
 
 [node name="Plataform" type="Sprite" parent="."]
@@ -111,17 +112,14 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
 position = Vector2( -151.481, 5.86194 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
 position = Vector2( -520.596, 192.467 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Plataform/StaticBody2D"]
 position = Vector2( 237.767, 192.955 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Plataform/StaticBody2D"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/player/walk4 Chico.png" type="Texture" id=2]
@@ -28,16 +28,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=13]
-radius = 18.5
-height = 22.0
-
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 10, 1 )
-
 [sub_resource type="CapsuleShape2D" id=15]
 radius = 18.0
 height = 24.0
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 6, 1 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 131, 277 )
@@ -48,20 +44,19 @@ script = ExtResource( 1 )
 position = Vector2( 4, 1.55777 )
 scale = Vector2( 0.161943, 0.16798 )
 frames = SubResource( 6 )
-animation = "walk"
-frame = 5
+animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.5, 1.5 )
-shape = SubResource( 13 )
+position = Vector2( 4, 1 )
+shape = SubResource( 15 )
 
 [node name="Pisar" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pisar"]
-position = Vector2( -1, 31 )
+position = Vector2( 3, 31 )
 shape = SubResource( 14 )
 
 [node name="Limite" type="Area2D" parent="."]
@@ -69,7 +64,7 @@ collision_layer = 2048
 collision_mask = 2048
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limite"]
-position = Vector2( 3, 1 )
+position = Vector2( 4, 1 )
 shape = SubResource( 15 )
 
 [connection signal="body_entered" from="Pisar" to="." method="_on_Pisar_body_entered"]

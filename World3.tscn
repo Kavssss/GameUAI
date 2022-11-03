@@ -85,7 +85,6 @@ polygon = PoolVector2Array( 1575, -309.027, 1575, 21.56, 1215, 21.56, 1215, -21.
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/Entrada/StaticBody2D"]
 position = Vector2( -950.625, -93.4267 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Saida" type="Area2D" parent="Scenario"]
@@ -95,7 +94,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/Saida"]
 position = Vector2( 1013, 249 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 13 )
 
 [node name="Plataform" type="Sprite" parent="."]
