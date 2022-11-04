@@ -2,11 +2,14 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 var motion = Vector2()
-var conf = true
+var conf = false
+var gravidade = true
 
 func _physics_process(_delta):
-	motion.y += 20
-	if conf:
+	if gravidade:
+		motion.y += 20
+
+	if !conf:
 		if Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
 			motion.x = 170
 			$Sprite.play("walk")
@@ -42,7 +45,7 @@ func queda():
 	return motion.y
 
 func confusao():
-	conf = false
+	conf = true
 	if Input.is_action_pressed("ui_left") or Input.is_key_pressed(KEY_A):
 		motion.x = 170
 		$Sprite.play("walk")
@@ -58,3 +61,7 @@ func confusao():
 	if is_on_floor():
 		if Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
 			motion.y = -520
+
+func lua():
+	gravidade = false
+	motion.y += 1

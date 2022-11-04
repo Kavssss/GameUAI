@@ -3,7 +3,7 @@
 [ext_resource path="res://Botão.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Button_up.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Button_down.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/open6.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/empty.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
@@ -24,6 +24,7 @@ animations = [ {
 } ]
 
 [node name="Botão" type="StaticBody2D"]
+position = Vector2( 65, 55 )
 collision_layer = 256
 collision_mask = 257
 script = ExtResource( 1 )
@@ -32,12 +33,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 527, 255 )
+position = Vector2( 0, 3.8147e-06 )
 scale = Vector2( 0.528571, 0.528571 )
 frames = SubResource( 14 )
 animation = "up"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 527, 255 )
+position = Vector2( 7.62939e-06, 3.8147e-06 )
 scale = Vector2( 0.528571, 0.528571 )
 polygon = PoolVector2Array( -117.297, 17.027, -107.838, -9.45944, 107.838, -9.45944, 117.297, 17.027 )
